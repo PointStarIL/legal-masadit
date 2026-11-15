@@ -1,9 +1,9 @@
 # Legal-Massadit-All – פלאגין לעבודה עם ליגל מתוך Claude
 
-> **גרסת קובץ אחד (ניסוי) – Legal-Massadit-All 1.0.3.** זו גרסה נפרדת של הפלאגין: חבילת התוסף Legal-Connector.mcpb כלולה בתוכה (לפי התיעוד: mcpServers ב-plugin.json מצביע על קובץ .mcpb), ולכן **מעלים קובץ אחד בלבד**. **אל תתקין אותה יחד עם התוסף או עם הפלאגין הרגיל Legal-Massadit** (ייווצרו כלים כפולים). הכלים נקראים כאן $(mcp__plugin_legal-massadit-all_Legal-Connector__)legal_read, legal_preview, legal_apply, legal_setup_status, legal_list_users, legal_setup_apply; הפקודה היא /legal-massadit-all:legal-setup. לפי התיעוד, שרת MCP של פלאגין נטען בשיחות שרצות על המחשב (לשונית Code עם סביבה Local, ו-Cowork מקומי), ולא בשיחות ענן. אם הוא לא נטען, ב-Claude Code אפשר לבדוק עם /mcp. בכל מקום בהמשך שכתוב "התוסף" או "Legal-Connector" – הכוונה לשרת הפנימי של הפלאגין הזה; סעיפי ההתקנה של ה-.mcpb לא רלוונטיים.
+> **גרסת קובץ אחד (ניסוי) – Legal-Massadit-All 1.0.4.** זו גרסה נפרדת של הפלאגין: שרת ה-MCP של Legal-Connector כלול בתוכה (מוגדר ישירות ב-mcpServers של plugin.json ורץ מ-`mcp/legal-mcp.ps1`), ולכן **מעלים קובץ אחד בלבד**. **אל תתקין אותה יחד עם התוסף או עם הפלאגין הרגיל Legal-Massadit** (ייווצרו כלים כפולים). הכלים נקראים כאן $(mcp__plugin_legal-massadit-all_Legal-Connector__)legal_read, legal_preview, legal_apply, legal_setup_status, legal_list_users, legal_setup_apply; הפקודה היא /legal-massadit-all:legal-setup. לפי התיעוד, שרת MCP של פלאגין נטען בשיחות שרצות על המחשב (לשונית Code עם סביבה Local, ו-Cowork מקומי), ולא בשיחות ענן. אם הוא לא נטען, ב-Claude Code אפשר לבדוק עם /mcp. בכל מקום בהמשך שכתוב "התוסף" או "Legal-Connector" – הכוונה לשרת הפנימי של הפלאגין הזה; סעיפי ההתקנה של ה-.mcpb לא רלוונטיים.
 
 
-**גרסה 1.0.3** · **English summary:** a Claude plugin (skills + setup wizard) that, together with the **Legal-Connector** Claude Desktop extension (the tools), lets Claude work with the Legal (ליגל) law-office case-management software through its Access database and document folders: open clients and cases, add calendar events, manage documents and sub-folders, change case status. Every write is previewed first, needs your explicit approval, is backed up automatically and is verified afterwards. Windows only. Unofficial – not made or supported by the Legal vendor.
+**גרסה 1.0.4** · **English summary:** a Claude plugin (skills + setup wizard) that, together with the **Legal-Connector** Claude Desktop extension (the tools), lets Claude work with the Legal (ליגל) law-office case-management software through its Access database and document folders: open clients and cases, add calendar events, manage documents and sub-folders, change case status. Every write is previewed first, needs your explicit approval, is backed up automatically and is verified afterwards. Windows only. Unofficial – not made or supported by the Legal vendor.
 
 ---
 
@@ -150,8 +150,6 @@ legal-massadit/                  (הפלאגין)
   commands/legal-setup.md        /legal-massadit-all:legal-setup – אשף ההגדרות
   hooks/                         הודעת פתיחה (האם ההגדרה הושלמה) + חסימת נגיעה בהגדרות
   tools/                         הכלים (PowerShell) ואשף ההגדרה
+  mcp/legal-mcp.ps1              שרת ה-MCP המוגבל (Legal-Connector), מוגדר ב-plugin.json
   docs/reference.md              תיעוד כללי על מבנה הנתונים של ליגל
-
-Legal-Connector.mcpb             (התוסף)
-  manifest.json, mcp/legal-mcp.ps1, tools/   שרת ה-MCP המוגבל והכלים
 ```
