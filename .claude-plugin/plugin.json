@@ -17,7 +17,8 @@
   "mcpServers": {
     "Legal-Connector": {
       "command": "powershell",
-      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${CLAUDE_PLUGIN_ROOT}/mcp/legal-mcp.ps1"]
+      "args": ["-NoProfile", "-File", "${CLAUDE_PLUGIN_ROOT}/mcp/legal-mcp.ps1"],
+      "env": { "PSExecutionPolicyPreference": "Bypass" }
     }
   }
 }
