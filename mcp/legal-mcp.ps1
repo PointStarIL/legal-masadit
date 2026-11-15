@@ -133,7 +133,7 @@ function Run-Tool([string[]]$argv) {
   $out = (& $psExe -NoProfile -ExecutionPolicy Bypass -File $tool @argv 2>&1 | Out-String)
   $code = $LASTEXITCODE
   if ($out.Length -gt 60000) { $out = $out.Substring(0, 60000) + "`n[output truncated]" }
-  if ($out -match '\[SETUP REQUIRED\]') { $out += "`n`nStart the interactive first-time setup now: ask the user the setup questions in the chat (AskUserQuestion), then call legal_setup_apply with the answers (the user may instead run the wizard in a terminal: powershell -NoProfile -File `"$(Join-Path $root 'tools\Setup-MasTmd.ps1')`")." }
+  if ($out -match '\[SETUP REQUIRED\]') { $out += "`n`nStart the interactive first-time setup now: ask the user the setup questions in the chat (AskUserQuestion), then call legal_setup_apply with the answers (the user may instead run the setup wizard tools\Setup-MasTmd.ps1 from the plugin folder in a terminal)." }
   @{ out = $out.TrimEnd(); code = $code }
 }
 function Handle-Call($name, $a) {
