@@ -152,4 +152,5 @@ legal-massadit/                  (הפלאגין)
   tools/                         הכלים (PowerShell) ואשף ההגדרה
   mcp/legal-mcp.ps1              שרת ה-MCP המוגבל (Legal-Connector), מוגדר ב-plugin.json
   docs/reference.md              תיעוד כללי על מבנה הנתונים של ליגל
+  docs/publishing.md             כללי פרסום ושדרוג (בדיקת ה-Directory) – לקרוא לפני כל שדרוג
 ```
