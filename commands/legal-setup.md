@@ -1,6 +1,6 @@
 ---
 description: Legal setup wizard (ליגל) - first-time setup or change of the Legal tools settings
-allowed-tools: AskUserQuestion, ToolSearch, Bash, PowerShell, mcp__remote-devices__device_bash, mcp__plugin_legal-massadit-all_Legal-Connector__legal_setup_status, mcp__plugin_legal-massadit-all_Legal-Connector__legal_setup_apply, mcp__plugin_legal-massadit-all_Legal-Connector__legal_list_users
+allowed-tools: AskUserQuestion, ToolSearch, mcp__plugin_legal-massadit-all_Legal-Connector__legal_setup_status, mcp__plugin_legal-massadit-all_Legal-Connector__legal_setup_apply, mcp__plugin_legal-massadit-all_Legal-Connector__legal_list_users
 ---
 The user wants to set up or change the settings of the Legal tools (work mode, Legal folder, user name, VAT, default event location, backups). Talk to the user in Hebrew. (This flow also starts by itself on the first use, when no settings exist yet - the session-start message says so.)
 
